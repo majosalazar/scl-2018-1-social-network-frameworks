@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Login from './componenteIsma/login';
-import './App.css';
+import Login from './components/login/login';
+import '../src/App.css';
 
 class App extends Component {
   render() {

@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Icon } from 'react-materialize'
 import firebase from 'firebase'; // aqui importamos firebase
-
-
-import '../componenteIsma/login.css';
 
 class Login extends Component {
   constructor() {
@@ -55,10 +51,7 @@ class Login extends Component {
     } else {
       return (
         <div>
-          <Button waves='light'><Icon>thumb_up</Icon>
-          </Button>
-
-          <button onClick={this.getAuth}>Google</button>
+         <button onClick={this.getAuth}>Google</button>
         </div>
       )
     }

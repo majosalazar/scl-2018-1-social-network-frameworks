@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase'; // aqui importamos firebase
+import '../login/login.css'
+import {Button, Icon} from 'react-materialize'
 
 class Login extends Component {
   constructor() {
@@ -60,11 +62,11 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <p>
+      <header className="Login-intro">
+        
           {this.renderButton()}
-        </p>
-      </div>
+      
+      </header>
     )
   }
 }

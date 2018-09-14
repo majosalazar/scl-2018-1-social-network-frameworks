@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { Button, Icon } from 'react-materialize'
 import firebase from 'firebase'; // aqui importamos firebase
+import '../login/login.css'
+import { Button } from 'react-materialize'
 
-
-import '../componenteIsma/login.css';
-
-class Login extends Component {
+class LoginGoogle extends Component {
   constructor() {
     super(); // esta funcion debe estar para que el constructor funcione
     this.state = { // aqui defino mi estado de nuestro componente
-      user: null
+      user: 0
     };
 
     this.getAuth = this.getAuth.bind(this);
@@ -46,19 +44,17 @@ class Login extends Component {
     if (this.state.user) { // aqui sabe si el usuario es null cuando haga el reseteado
       return (
         <div>
-          <p>Hola{this.state.user.email}</p>
-          <button onClick={this.logginOut}>Salir</button>
-
+          <p>Hola{this.state.user.email}
+            <button onClick={this.logginOut}>Salir</button>
+          </p>
         </div>
       )
       // si no esta logueado
     } else {
       return (
         <div>
-          <Button waves='light'><Icon>thumb_up</Icon>
-          </Button>
-
-          <button onClick={this.getAuth}>Google</button>
+          <Button className='red' onClick={this.getAuth}>Google</Button>
+    
         </div>
       )
     }
@@ -68,12 +64,12 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <p>
-          {this.renderButton()}
-        </p>
+
+        {this.renderButton()}
+
       </div>
     )
   }
 }
 
-export default Login;
+export default LoginGoogle;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import firebase from 'firebase'; // aqui importamos firebase
 import '../login/login.css'
-import {Button, Icon} from 'react-materialize'
+import { Button } from 'react-materialize'
 
-class Login extends Component {
+class LoginFacebook extends Component {
   constructor() {
     super(); // esta funcion debe estar para que el constructor funcione
     this.state = { // aqui defino mi estado de nuestro componente
-      user: null
+      user: 0
     };
 
     this.getAuth = this.getAuth.bind(this);
@@ -23,7 +23,7 @@ class Login extends Component {
 
   getAuth() {
     //Proveedor de google
-    let provider = new firebase.auth.GoogleAuthProvider();
+    let provider = new firebase.auth.FacebookAuthProvider();
     //Añadiendo Api de Google
     firebase.auth().signInWithPopup(provider) // Esto devuelve una promesa
       // Aqui obtengo el email 
@@ -44,16 +44,17 @@ class Login extends Component {
     if (this.state.user) { // aqui sabe si el usuario es null cuando haga el reseteado
       return (
         <div>
-          <p>Hola{this.state.user.email}</p>
-          <button onClick={this.logginOut}>Salir</button>
-
+          <p>Hola{this.state.user.email}
+            <button onClick={this.logginOut}>Salir</button>
+          </p>
         </div>
       )
       // si no esta logueado
     } else {
       return (
         <div>
-         <button onClick={this.getAuth}>Google</button>
+          <Button className='blue' onClick={this.getAuth}>Facebook</Button>
+    
         </div>
       )
     }
@@ -62,13 +63,13 @@ class Login extends Component {
 
   render() {
     return (
-      <header className="Login-intro">
-        
-          {this.renderButton()}
-      
-      </header>
+      <div>
+
+        {this.renderButton()}
+
+      </div>
     )
   }
 }
 
-export default Login;
+export default LoginFacebook;

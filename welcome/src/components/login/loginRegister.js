@@ -6,6 +6,7 @@ import { Input } from 'react-materialize';
 import { Card} from 'react-materialize';
 import { Icon } from 'react-materialize';
 import '../login/login.css'
+import Logo from './loginLogo';
 
 class LoginRegister extends Component {
   constructor() {
@@ -19,7 +20,8 @@ class LoginRegister extends Component {
 
           </Col>
           <Col sm={4}>
-            <Card className='white' textClassName='white-text' title='Welcom Inmigrants'>
+            <Card className='CardRegister' textClassName='white-text'>
+              <Logo />
               <Input s={6} type="email" label="Correo Electronico"><Icon>contact_mail</Icon></Input>
               <Input s={6} type="password" label="Contraseña"><Icon>lock_outline</Icon></Input>
               <LoginGoogle />

@@ -52,7 +52,7 @@ class LoginFacebook extends Component {
       // si no esta logueado
     } else {
       return (
-        <div>
+        <div className= "center-align">
           <Button className='blue' onClick={this.getAuth}>Facebook</Button>
     
         </div>

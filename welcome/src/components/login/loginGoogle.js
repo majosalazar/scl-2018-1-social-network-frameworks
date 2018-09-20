@@ -52,8 +52,9 @@ class LoginGoogle extends Component {
       // si no esta logueado
     } else {
       return (
-        <div>
-          <Button className='red' onClick={this.getAuth}>Google</Button>
+        <div className="center-align">
+
+          <Button className='btnGoogle' onClick={this.getAuth}>Google</Button>
     
         </div>
       )

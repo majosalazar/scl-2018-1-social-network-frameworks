@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import LoginRegister from './loginRegister';
-import '../login/login.css'
+// import React, { Component } from 'react';
+// import LoginRegister from './loginRegister';
+// import '../login/login.css'
 
 
-class LoginIntegral extends Component {
-  render() {
-    return (
-      <div className ="Login-Integral">
-      <LoginRegister />
-      </div>
-    );
-  }
-}
+// class LoginIntegral extends Component {
+//   render() {
+//     return (
+//       <div className ="Login-Integral">
+//       <LoginRegister />
+//       </div>
+//     );
+//   }
+// }
 
-export default LoginIntegral;
+// export default LoginIntegral;

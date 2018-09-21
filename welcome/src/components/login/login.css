@@ -24,3 +24,12 @@ width: 100%;
 .CardRegister{
     margin-top: 20%
 }
+.singUpBtn{
+    color:black;
+}
+.signUp{
+    margin-top: 10%;
+}
+.btnRegister{
+    background-color: #009688;
+}

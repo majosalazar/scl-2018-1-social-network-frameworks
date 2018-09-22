@@ -19,7 +19,7 @@ class LoginRegister extends Component {
 
           </Col>
           <Col sm={4}>
-            <Card className='white' textClassName='white-text' title='Welcom Inmigrants'>
+            <Card className='white' textClassName='white-text' title='Welcome!'>
               <Input s={6} type="email" label="Correo Electronico"><Icon>contact_mail</Icon></Input>
               <Input s={6} type="password" label="Contraseña"><Icon>lock_outline</Icon></Input>
               <LoginGoogle />

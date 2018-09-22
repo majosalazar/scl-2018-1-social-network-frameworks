@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -15,8 +15,6 @@ firebase.initializeApp({
     messagingSenderId: "215210878542"
 
 });
-
-
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
       <nav>
-        <div class="nav-wrapper">
+        <div className="nav-wrapper">
           <a href="#!" class="brand-logo">Welcome!</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">

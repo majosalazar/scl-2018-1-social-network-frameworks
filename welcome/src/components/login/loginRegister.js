@@ -16,6 +16,7 @@ class LoginRegister extends Component {
           <Col sm={4}>
           </Col>
           <Col sm={4}>
+
             <Card className='white' textClassName='black-text'>
             <Logo />
               <Input s={6} type="email" label="Correo Electronico"><Icon>contact_mail</Icon></Input>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import firebase from 'firebase'; // aqui importamos firebase
-import Wall from '../wall/wall';
+import Navbar from '../navbar/navbar';
 import '../login/login.css'
 import { Button } from 'react-materialize'
 
-class LoginGoogle extends Component {
+class LoginFacebook extends Component {
   constructor() {
     super(); // esta funcion debe estar para que el constructor funcione
     this.state = { // aqui defino mi estado de nuestro componente
@@ -12,6 +12,7 @@ class LoginGoogle extends Component {
     };
 
     this.getAuth = this.getAuth.bind(this);
+
   }
   // // metodo de react
   componentDidMount() { //Se ejecuta después de que el componente sea renderizado en el DOM.
@@ -23,7 +24,7 @@ class LoginGoogle extends Component {
 
   getAuth() {
     //Proveedor de google
-    let provider = new firebase.auth.GoogleAuthProvider();
+    let provider = new firebase.auth.FacebookAuthProvider();
     //Añadiendo Api de Google
     firebase.auth().signInWithPopup(provider) // Esto devuelve una promesa
       // Aqui obtengo el email 
@@ -32,24 +33,19 @@ class LoginGoogle extends Component {
       .catch(error => console.log(`${error.code}: ${error.message} Usuario no ha podido hacer loggin`))
   }
 
-
   renderButton() { // esta funcion sirve para renderizar si el usuario se loguea o no 
     //   // si esta logueado el usuario
     if (this.state.user) { // aqui sabe si el usuario es null cuando haga el reseteado
       return (
         <div>
-          <p>Hola{this.state.user.email}
-          <Wall />
-            <button onClick={this.logginOut}>Salir</button>
-          </p>
+         <Navbar/>
         </div>
       )
       // si no esta logueado
     } else {
       return (
-        <div className="center-align">
-
-          <Button className='btnGoogle' onClick={this.getAuth}>Google</Button>
+        <div className= "center-align">
+          <Button className='blue' onClick={this.getAuth}>Facebook</Button>
     
         </div>
       )
@@ -68,4 +64,4 @@ class LoginGoogle extends Component {
   }
 }
 
-export default LoginGoogle;
+export default LoginFacebook;

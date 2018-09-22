@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import LoginGoogle from './loginGoogle';
-import LoginFacebook from './loginFacebook';
-import Logo from './loginLogo';
-import { Input } from 'react-materialize';
-import { Card} from 'react-materialize';
-import { Icon } from 'react-materialize';
+import { Input, Card, Icon } from 'react-materialize';
 import '../login/login.css'
+import LoginGoogle from './loginGoogle';
+import Logo from './loginLogo';
 
 class LoginRegister extends Component {
   constructor() {
@@ -17,7 +14,6 @@ class LoginRegister extends Component {
       <Container>
         <Row>
           <Col sm={4}>
-
           </Col>
           <Col sm={4}>
             <Card className='white' textClassName='black-text'>
@@ -25,7 +21,6 @@ class LoginRegister extends Component {
               <Input s={6} type="email" label="Correo Electronico"><Icon>contact_mail</Icon></Input>
               <Input s={6} type="password" label="Contraseña"><Icon>lock_outline</Icon></Input>
               <LoginGoogle />
-              <LoginFacebook />
             </Card>
 
           </Col>

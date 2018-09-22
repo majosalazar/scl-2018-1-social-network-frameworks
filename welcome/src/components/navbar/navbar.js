@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
 import '../navbar/navbar.css'
 
 class Navbar extends Component {
-  constructor() {
-    super(); // esta funcion debe estar para que el constructor funcione
-    this.logginOut = this.logginOut.bind(this);
-  }
-
   render() {
     return (
       <div className="Navbar">
@@ -28,13 +24,6 @@ class Navbar extends Component {
         <li><a href="#">Cerrar Sesión</a></li>
       </ul>
    
-      logginOut() { // Funcion para cerrar sesion
-    firebase.auth().signOut()
-      .then(result => console.log(`${result.user.email} ha iniciado sesión`))
-      // Si hay algun error, aqui se muestra
-      .catch(error => console.log(`${error.code}: ${error.message} Usuario no ha podido hacer loggin`))
-  }
-
       </div>
     );
   }

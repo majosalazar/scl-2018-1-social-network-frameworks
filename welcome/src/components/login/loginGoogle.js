@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase'; // aqui importamos firebase
+import Wall from '../wall/wall';
 import '../login/login.css'
 import { Button } from 'react-materialize'
 
@@ -45,6 +46,7 @@ class LoginGoogle extends Component {
       return (
         <div>
           <p>Hola{this.state.user.email}
+          <Wall />
             <button onClick={this.logginOut}>Salir</button>
           </p>
         </div>

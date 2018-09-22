@@ -44,6 +44,11 @@ class Wall extends Component {
     //referencia al input
     this.textInput.value = '';
     console.log(this.state.items)
+    
+    //referencia al fichero en firebase
+    //const post = event.target.file[0]
+    //const storageRef = firebase.storage().ref(menssageWall/${post.name})
+    
   }
     
 };

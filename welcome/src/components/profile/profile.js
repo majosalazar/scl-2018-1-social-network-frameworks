@@ -5,7 +5,7 @@ class Profile extends Component {
     return (
       <div className="Profile">
         <img></img>
-        <h4></h4>
+        <h4>HOla</h4>
         
 
       
@@ -13,3 +13,5 @@ class Profile extends Component {
     )
   }
 }
+
+export default Profile;

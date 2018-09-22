@@ -9,3 +9,31 @@ width: 100%;
 .Icon-Register{
     color: black;
 }
+
+.logoRedSocial{
+ width:60% ; 
+ height:80%; 
+ text-align: center;
+}
+.btnGoogle{
+ background-color: red;
+ color: white;
+ width: 49%;
+ text-align: center;
+}
+.CardRegister{
+    margin-top: 20%;
+    width: 100%;
+    height: 100%;
+    
+}
+.singUpBtn{
+    color:black;
+}
+.signUp{
+    margin-top: 10%;
+}
+.btnRegister{
+    background-color: #009688;
+    text-align: center;
+}
